@@ -39,4 +39,47 @@ class KadaneAlgorithmUnitTest {
         assertEquals(10, maxSum);
     }
 
+    @Test
+    void a1() {
+        // given
+        int[] arr = new int[] { 4, 1, -4, 3, 2 };
+        // when
+        KadaneAlgorithm algorithm = new KadaneAlgorithm();
+        int maxSum = algorithm.maxSubArraySum(arr);
+        // then
+        assertEquals(5, maxSum);
+    }
+
+    @Test
+    void a2() {
+        // given
+        int[] arr = new int[] { 1, 4, 1, -4, 3, -2, 2 };
+        // when
+        KadaneAlgorithm algorithm = new KadaneAlgorithm();
+        int maxSum = algorithm.maxSubArraySum(arr);
+        // then
+        assertEquals(5, maxSum);
+    }
+
+    @Test
+    void a3() {
+        // given
+        int[] arr = new int[] { 4, 1, -4, -4, 3, 2, 1 };
+        // when
+        KadaneAlgorithm algorithm = new KadaneAlgorithm();
+        int maxSum = algorithm.maxSubArraySum(arr);
+        // then
+        assertEquals(5, maxSum);
+    }
+
+    @Test
+    void a4() {
+        // given
+        int[] arr = new int[] { 1, 2, -1, 3, -6, -2 };
+        // when
+        KadaneAlgorithm algorithm = new KadaneAlgorithm();
+        int maxSum = algorithm.maxSubArraySum(arr);
+        // then
+        assertEquals(5, maxSum);
+    }
 }
