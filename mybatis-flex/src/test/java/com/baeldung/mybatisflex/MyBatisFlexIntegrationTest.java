@@ -89,6 +89,8 @@ public class MyBatisFlexIntegrationTest {
         if (status != null) {
             queryWrapper.and(Account::getStatus).eq(status);
         }
+        
+        queryWrapper.orderBy(column("id").asc());
 
         List<Account> accounts = accountMapper.selectListByQuery(queryWrapper);
 
