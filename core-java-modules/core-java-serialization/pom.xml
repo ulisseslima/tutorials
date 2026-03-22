@@ -43,6 +43,11 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -164,6 +169,7 @@
         <javamoney.moneta.version>1.1</javamoney.moneta.version>
         <maven-javadoc-plugin.version>3.6.2</maven-javadoc-plugin.version>
         <spring.core.version>4.3.20.RELEASE</spring.core.version>
+        <slf4j.version>2.0.17</slf4j.version>
     </properties>
 
 </project>
