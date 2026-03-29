@@ -1,4 +1,4 @@
-package com.baeldung.transientorserializable;
+package com.baeldung.sonarqubeandjacoco.transientorserializable;
 
 public class PreferenceService {
 

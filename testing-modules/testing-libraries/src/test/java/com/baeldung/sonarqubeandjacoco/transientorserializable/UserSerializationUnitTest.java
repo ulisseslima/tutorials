@@ -1,4 +1,4 @@
-package com.baeldung.transientorserializable;
+package com.baeldung.sonarqubeandjacoco.transientorserializable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
