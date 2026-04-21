@@ -9,20 +9,18 @@ public class SockMerchantUnitTest {
     @Test
     public void givenSockArray_whenUsingArray_thenReturnsCorrectPairCount() {
         SockMerchant merchant = new SockMerchant();
-        int[] colorSock = {11, 22, 22, 11, 33, 3, 33, 111111, 222222};
-        int expectedPairs = 3;
-        int colorMax = Arrays.stream(colorSock).max().getAsInt();
+        int[] socks = {11, 22, 22, 11, 33, 3, 33, 111111, 33, 222222};
+        int colorMax = Arrays.stream(socks).max().getAsInt();
         colorMax += 1;
-        int actualPairs = merchant.countPairsWithArray(colorSock.length, colorSock, colorMax);
-        assertEquals(expectedPairs, actualPairs);
+        int actualPairs = merchant.countPairsWithArray(socks.length, socks, colorMax);
+        assertEquals(3, actualPairs);
     }
 
     @Test
     public void givenSockArray_whenUsingSet_thenReturnsCorrectPairCount() {
         SockMerchant merchant = new SockMerchant();
-        int[] colorSock = {11, 22, 22, 11, 33, 3, 33, 111111, 222222};
-        int expectedPairs = 3;
-        int actualPairs = merchant.countPairsWithSet(colorSock);
-        assertEquals(expectedPairs, actualPairs);
+        int[] socks = {11, 22, 22, 11, 33, 3, 33, 111111, 33, 222222};
+        int actualPairs = merchant.countPairsWithSet(socks);
+        assertEquals(3, actualPairs);
     }
 }

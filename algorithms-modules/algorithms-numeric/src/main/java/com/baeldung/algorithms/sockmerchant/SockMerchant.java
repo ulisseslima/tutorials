@@ -5,29 +5,29 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 
 public class SockMerchant {
-    public int countPairsWithArray(int n, @Nonnull int[] colorSock, int k) {
-        int[] freqSock = new int[k];
-        int pairCount = 0;
+    public int countPairsWithArray(int n, @Nonnull int[] socks, int k) {
+        int[] counts = new int[k];
+        int pairs = 0;
         for (int i = 0; i < n; i++) {
-            freqSock[colorSock[i]]++;
+            counts[socks[i]]++;
         }
-        for (int count : freqSock) {
-            pairCount += count / 2;
+        for (int count : counts) {
+            pairs += count / 2;
         }
-        return pairCount;
+        return pairs;
     }
 
-    public int countPairsWithSet(@Nonnull int[] colorSock) {
+    public int countPairsWithSet(@Nonnull int[] socks) {
         Set<Integer> unmatchedSocks = new HashSet<>();
-        int pairCount = 0;
-        for (int sock : colorSock) {
+        int pairs = 0;
+        for (int sock : socks) {
             if (unmatchedSocks.contains(sock)) {
-                pairCount++;
+                pairs++;
                 unmatchedSocks.remove(sock);
             } else {
                 unmatchedSocks.add(sock);
             }
         }
-        return pairCount;
+        return pairs;
     }
 }
