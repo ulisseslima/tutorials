@@ -35,7 +35,7 @@ public class RemoveSessionServletUnitTest {
     }
 
     @Test
-    void testNoSessionToRemove() throws Exception {
+    void givenNoSession_whenRemoveAttribute_thenWarnLogged() throws Exception {
 
         new Expectations() {{
             request.getSession(false); result = null;
