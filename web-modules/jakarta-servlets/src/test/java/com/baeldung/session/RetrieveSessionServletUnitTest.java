@@ -33,7 +33,7 @@ public class RetrieveSessionServletUnitTest {
     }
 
     @Test
-    void testNoSessionFound() throws Exception {
+    void givenNoSession_whenGetAttribute_thenWarnLogged() throws Exception {
 
         new Expectations() {{
             request.getSession(false); result = null;
