@@ -16,7 +16,7 @@ public class StoreSessionServletUnitTest {
     HttpSession session;
 
     @Test
-    void testUserStoredInSession() throws Exception {
+    void givenUser_whenStoreInSession_thenAttributeIsSet() throws Exception {
 
         new Expectations() {{
             request.getSession(); result = session;
