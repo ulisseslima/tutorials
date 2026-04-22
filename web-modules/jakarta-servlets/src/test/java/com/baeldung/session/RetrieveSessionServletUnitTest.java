@@ -16,7 +16,7 @@ public class RetrieveSessionServletUnitTest {
     HttpSession session;
 
     @Test
-    void testUserRetrievedFromSession() throws Exception {
+    void givenUserInSession_whenGetAttribute_thenUserIsReturned() throws Exception {
         User mockUser = new User("john_doe", "john@example.com");
 
         new Expectations() {{
