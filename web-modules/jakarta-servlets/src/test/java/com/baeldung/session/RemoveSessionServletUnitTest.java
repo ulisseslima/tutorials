@@ -16,7 +16,7 @@ public class RemoveSessionServletUnitTest {
     HttpSession session;
 
     @Test
-    void testUserRemovedFromSession() throws Exception {
+    void givenUserInSession_whenRemoveAttribute_thenSessionIsInvalidated() throws Exception {
 
         new Expectations() {{
             request.getSession(false); result = session;
